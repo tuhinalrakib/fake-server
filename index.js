@@ -46,12 +46,7 @@ async function run() {
         res.send(result)
     })
 
-    app.get("/users/:email", async(req,res)=>{
-        const email = req.params.email
-        const query = { email : email}
-        const result = await userCollection.findOne(query)
-        res.send(result)
-    })
+    
 
     // Group Relatede APIs
     app.post("/groups", async (req,res)=>{
